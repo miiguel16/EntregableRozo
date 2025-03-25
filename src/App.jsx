@@ -27,10 +27,3 @@ export const App = () => {
   )
 
 }
-
-
-// Codigo para poner en la terminal y poder crear un proyecto de react con vite desde 0 (npm install create vite@latest)
-//Siempre instalar la libreria de tailwind que es (npm install tailwindcss @tailwindcss/vite)
-//tambien la libreria de vite que es (npm install )
-//Ahora la libreria de los iconos (npm install react-icons)
-// Y la del react router dom (npm install react-router-dom) 

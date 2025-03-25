@@ -19,13 +19,13 @@ export function Class2() {
     "#C0C0C0",     // Plata
     "#FFA500",     // Naranja
     "#A52A2A"      // Marrón
-    ];
+  ];
 
   const [color, setColor] = useState(coloresAbsolutos[0]);
 
-  //En esta Función podemos cambiar el color dentro del recuadro
+
   const cambiarColor = () => {
-    //Aqui podemos escoger un color aleatorio de la funcion "ColoresAbsolutos"
+
     const nuevoColor = coloresAbsolutos[Math.floor(Math.random() * coloresAbsolutos.length)];
     setColor(nuevoColor);
   };
@@ -35,9 +35,8 @@ export function Class2() {
       <div
         id="recuadro"
         className="w-64 h-64 border-4 border-black mt-4 flex items-center justify-center"
-        style={{ backgroundColor: color }} // Aplica el color al recuadro
-      >
-        {/* Muestra el nombre del color */}
+        style={{ backgroundColor: color }}>
+          
         <p className="text-white font-bold">{color}</p>
       </div>
 

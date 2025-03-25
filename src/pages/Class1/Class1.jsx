@@ -1,28 +1,13 @@
-import React, {useState } from 'react'
+import React, { useState } from "react";
 
 export const Class1 = () => {
-  
-  const [username, setUsername] = useState("Bienvenido usuario")
-
-  const [Text, setText] = useState('')
-
-  const handleGreet = () =>{
-    
-    setUsername('Bienvenido '+Text)
-  }
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <main className='w-screen h-screen bg-gray-600 flex flex-col items-center justify-center'>
-    <h1>{username} </h1>
-      <input 
-      value={Text}
-      onChange={(e)=> setText(e.target.value)}
-      placeholder='Ingrese su nombre'/>
-
-      <button onClick={handleGreet}> 
-        Saludos
+    <div className={`h-full w-full flex flex-col justify-center items-center transition-all duration-500 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
+      <button className="p-4 bg-gray-600 text-white rounded-lg" onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "Modo Light 🌞" : "Modo Dark 🌙"}
       </button>
-    </main>
-
-  )
-}
+    </div>
+  );
+};
